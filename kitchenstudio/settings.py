@@ -213,8 +213,8 @@ if not DEBUG:
                 'HOST': url.hostname,
                 'PORT': url.port,
             })
-            # if url.scheme == 'postgres':
-            #     DATABASES['default']['ENGINE'] = 'django.db.backends.postgresql_psycopg2'
+            if url.scheme == 'postgres':
+                DATABASES['default']['ENGINE'] = 'django.db.backends.postgresql_psycopg2'
 
             if url.scheme == 'mysql':
                 DATABASES['default']['ENGINE'] = 'django.db.backends.mysql'
