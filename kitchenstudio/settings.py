@@ -222,39 +222,39 @@ import urlparse
 #         print 'Unexpected error:', sys.exc_info()
 
 DEFAULT_FILE_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
-    STATICFILES_STORAGE = DEFAULT_FILE_STORAGE
-    AWS_ACCESS_KEY_ID = 'AKIAILZKUJXWAWB3CYFA'
-    AWS_SECRET_ACCESS_KEY = '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'
-    AWS_STORAGE_BUCKET_NAME = 'kitchenstudio'
-    STATIC_URL = '//s3.amazonaws.com/%s/' % AWS_STORAGE_BUCKET_NAME
-    ADMIN_MEDIA_PREFIX = STATIC_URL + 'admin/'
+STATICFILES_STORAGE = DEFAULT_FILE_STORAGE
+AWS_ACCESS_KEY_ID = 'AKIAILZKUJXWAWB3CYFA'
+AWS_SECRET_ACCESS_KEY = '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'
+AWS_STORAGE_BUCKET_NAME = 'kitchenstudio'
+STATIC_URL = '//s3.amazonaws.com/%s/' % AWS_STORAGE_BUCKET_NAME
+ADMIN_MEDIA_PREFIX = STATIC_URL + 'admin/'
 
-    # Register database schemes in URLs.
-    urlparse.uses_netloc.append('postgres')
-    urlparse.uses_netloc.append('mysql')
+# Register database schemes in URLs.
+urlparse.uses_netloc.append('postgres')
+urlparse.uses_netloc.append('mysql')
 
-    try:
-        if 'DATABASES' not in locals():
-            DATABASES = {}
+try:
+    if 'DATABASES' not in locals():
+        DATABASES = {}
 
-        if 'DATABASE_URL' in os.environ:
-            url = urlparse.urlparse(os.environ['DATABASE_URL'])
+    if 'DATABASE_URL' in os.environ:
+        url = urlparse.urlparse(os.environ['DATABASE_URL'])
 
-            # Ensure default database exists.
-            DATABASES['default'] = DATABASES.get('default', {})
+        # Ensure default database exists.
+        DATABASES['default'] = DATABASES.get('default', {})
 
-            # Update with environment configuration.
-            DATABASES['default'].update({
-                'NAME': url.path[1:],
-                'USER': url.username,
-                'PASSWORD': url.password,
-                'HOST': url.hostname,
-                'PORT': url.port,
-            })
-            if url.scheme == 'postgres':
-                DATABASES['default']['ENGINE'] = 'django.db.backends.postgresql_psycopg2'
+        # Update with environment configuration.
+        DATABASES['default'].update({
+            'NAME': url.path[1:],
+            'USER': url.username,
+            'PASSWORD': url.password,
+            'HOST': url.hostname,
+            'PORT': url.port,
+        })
+        if url.scheme == 'postgres':
+            DATABASES['default']['ENGINE'] = 'django.db.backends.postgresql_psycopg2'
 
-            if url.scheme == 'mysql':
-                DATABASES['default']['ENGINE'] = 'django.db.backends.mysql'
-    except Exception:
-        print 'Unexpected error:', sys.exc_info()
+        if url.scheme == 'mysql':
+            DATABASES['default']['ENGINE'] = 'django.db.backends.mysql'
+except Exception:
+    print 'Unexpected error:', sys.exc_info()
