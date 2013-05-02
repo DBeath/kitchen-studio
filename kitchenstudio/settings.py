@@ -1,6 +1,6 @@
 # Django settings for kitchenstudio project.
 
-DEBUG = False
+DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
@@ -9,6 +9,18 @@ ADMINS = (
 )
 
 MANAGERS = ADMINS
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
+        'NAME': '',                      # Or path to database file if using sqlite3.
+        # The following settings are not used with sqlite3:
+        'USER': '',
+        'PASSWORD': '',
+        'HOST': '',                      # Empty for localhost through domain sockets or '127.0.0.1' for localhost through TCP.
+        'PORT': '',                      # Set to empty string for default.
+    }
+}
 
 # Hosts/domain names that are valid for this site; required if DEBUG is False
 # See https://docs.djangoproject.com/en/1.5/ref/settings/#allowed-hosts
@@ -147,114 +159,76 @@ LOGGING = {
 }
 
 # Parse database configuration from $DATABASE_URL
-#import dj_database_url
+import dj_database_url
 #DATABASES['default'] =  dj_database_url.config()
-#DATABASES = {'default': dj_database_url.config(default='postgres://david:aieget@localhost/kitchenstudiodb')}
+DATABASES = {'default': dj_database_url.config(default='postgres://david:aieget@localhost/kitchenstudiodb')}
 
 # Honor the 'X-Forwarded-Proto' header for request.is_secure()
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
-import os
-import sys
-import urlparse
+# import os
+# import sys
+# import urlparse
 
-if DEBUG:
-    MEDIA_URL = '/media/'
-    STATIC_ROOT = ''
-    STATIC_URL = '/static/'
-    STATICFILES_DIRS = (
-        os.path.join(os.path.abspath(os.path.dirname(__file__) + '/..'), 'static'),
-    )
-    STATICFILES_FINDERS = (
-        'django.contrib.staticfiles.finders.FileSystemFinder',
-        'django.contrib.staticfiles.finders.AppDirectoriesFinder',
-    )
+# if DEBUG:
+#     MEDIA_URL = '/media/'
+#     STATIC_ROOT = ''
+#     STATIC_URL = '/static/'
+#     STATICFILES_DIRS = (
+#         os.path.join(os.path.abspath(os.path.dirname(__file__) + '/..'), 'static'),
+#     )
+#     STATICFILES_FINDERS = (
+#         'django.contrib.staticfiles.finders.FileSystemFinder',
+#         'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+#     )
 
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.postgresql_psycopg2', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-            'NAME': 'kitchenstudiodb',                      # Or path to database file if using sqlite3.
-            # The following settings are not used with sqlite3:
-            'USER': 'dbeath',
-            'PASSWORD': '@ieget',
-            'HOST': '',                      # Empty for localhost through domain sockets or '127.0.0.1' for localhost through TCP.
-            'PORT': '',                      # Set to empty string for default.
-        }
-    }
+#     DATABASES = {
+#         'default': {
+#             'ENGINE': 'django.db.backends.postgresql_psycopg2', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
+#             'NAME': 'kitchenstudiodb',                      # Or path to database file if using sqlite3.
+#             # The following settings are not used with sqlite3:
+#             'USER': 'dbeath',
+#             'PASSWORD': '@ieget',
+#             'HOST': '',                      # Empty for localhost through domain sockets or '127.0.0.1' for localhost through TCP.
+#             'PORT': '',                      # Set to empty string for default.
+#         }
+#     }
 
-if not DEBUG:
-    DEFAULT_FILE_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
-    STATICFILES_STORAGE = DEFAULT_FILE_STORAGE
-    AWS_ACCESS_KEY_ID = 'AKIAILZKUJXWAWB3CYFA'
-    AWS_SECRET_ACCESS_KEY = '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'
-    AWS_STORAGE_BUCKET_NAME = 'kitchenstudio'
-    STATIC_URL = '//s3.amazonaws.com/%s/' % AWS_STORAGE_BUCKET_NAME
-    ADMIN_MEDIA_PREFIX = STATIC_URL + 'admin/'
+# if not DEBUG:
+#     DEFAULT_FILE_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
+#     STATICFILES_STORAGE = DEFAULT_FILE_STORAGE
+#     AWS_ACCESS_KEY_ID = 'AKIAILZKUJXWAWB3CYFA'
+#     AWS_SECRET_ACCESS_KEY = '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'
+#     AWS_STORAGE_BUCKET_NAME = 'kitchenstudio'
+#     STATIC_URL = '//s3.amazonaws.com/%s/' % AWS_STORAGE_BUCKET_NAME
+#     ADMIN_MEDIA_PREFIX = STATIC_URL + 'admin/'
 
-    # Register database schemes in URLs.
-    urlparse.uses_netloc.append('postgres')
-    urlparse.uses_netloc.append('mysql')
+#     # Register database schemes in URLs.
+#     urlparse.uses_netloc.append('postgres')
+#     urlparse.uses_netloc.append('mysql')
 
-    try:
-        if 'DATABASES' not in locals():
-            DATABASES = {}
+#     try:
+#         if 'DATABASES' not in locals():
+#             DATABASES = {}
 
-        if 'DATABASE_URL' in os.environ:
-            url = urlparse.urlparse(os.environ['DATABASE_URL'])
+#         if 'DATABASE_URL' in os.environ:
+#             url = urlparse.urlparse(os.environ['DATABASE_URL'])
 
-            # Ensure default database exists.
-            DATABASES['default'] = DATABASES.get('default', {})
+#             # Ensure default database exists.
+#             DATABASES['default'] = DATABASES.get('default', {})
 
-            # Update with environment configuration.
-            DATABASES['default'].update({
-                'NAME': url.path[1:],
-                'USER': url.username,
-                'PASSWORD': url.password,
-                'HOST': url.hostname,
-                'PORT': url.port,
-            })
-            if url.scheme == 'postgres':
-                DATABASES['default']['ENGINE'] = 'django.db.backends.postgresql_psycopg2'
+#             # Update with environment configuration.
+#             DATABASES['default'].update({
+#                 'NAME': url.path[1:],
+#                 'USER': url.username,
+#                 'PASSWORD': url.password,
+#                 'HOST': url.hostname,
+#                 'PORT': url.port,
+#             })
+#             if url.scheme == 'postgres':
+#                 DATABASES['default']['ENGINE'] = 'django.db.backends.postgresql_psycopg2'
 
-            if url.scheme == 'mysql':
-                DATABASES['default']['ENGINE'] = 'django.db.backends.mysql'
-    except Exception:
-        print 'Unexpected error:', sys.exc_info()
-
-# DEFAULT_FILE_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
-# STATICFILES_STORAGE = DEFAULT_FILE_STORAGE
-# AWS_ACCESS_KEY_ID = 'AKIAILZKUJXWAWB3CYFA'
-# AWS_SECRET_ACCESS_KEY = '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'
-# AWS_STORAGE_BUCKET_NAME = 'kitchenstudio'
-# STATIC_URL = '//s3.amazonaws.com/%s/' % AWS_STORAGE_BUCKET_NAME
-# ADMIN_MEDIA_PREFIX = STATIC_URL + 'admin/'
-
-# # Register database schemes in URLs.
-# urlparse.uses_netloc.append('postgres')
-# urlparse.uses_netloc.append('mysql')
-
-# try:
-#     if 'DATABASES' not in locals():
-#         DATABASES = {}
-
-#     if 'DATABASE_URL' in os.environ:
-#         url = urlparse.urlparse(os.environ['DATABASE_URL'])
-
-#         # Ensure default database exists.
-#         DATABASES['default'] = DATABASES.get('default', {})
-
-#         # Update with environment configuration.
-#         DATABASES['default'].update({
-#             'NAME': url.path[1:],
-#             'USER': url.username,
-#             'PASSWORD': url.password,
-#             'HOST': url.hostname,
-#             'PORT': url.port,
-#         })
-#         if url.scheme == 'postgres':
-#             DATABASES['default']['ENGINE'] = 'django.db.backends.postgresql_psycopg2'
-
-#         if url.scheme == 'mysql':
-#             DATABASES['default']['ENGINE'] = 'django.db.backends.mysql'
-# except Exception:
-#     print 'Unexpected error:', sys.exc_info()
+#             if url.scheme == 'mysql':
+#                 DATABASES['default']['ENGINE'] = 'django.db.backends.mysql'
+#     except Exception:
+#         print 'Unexpected error:', sys.exc_info()
