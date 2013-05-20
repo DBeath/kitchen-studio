@@ -3,8 +3,8 @@
 <p>{{ client.first_name }}</p>
 <p>{{ client.last_name }}</p>
 
-<p>{{ client.email }}</p>
-<p>{{ client.current_address }}</p>
+<p>{{ client.email }} Email:<input type="text" name="email"></p>
+<p>{{ client.current_address }} </p>
 
 <ul>
 	{% for phone in client.phone_set.all %}
