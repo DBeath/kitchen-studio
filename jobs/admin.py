@@ -30,9 +30,12 @@ class EventInline(admin.TabularInline):
 	extra = 1
 
 class JobAdmin(admin.ModelAdmin):
-	list_display = ('__unicode__', 'latest_consultation_date', 'latest_event')
-	inlines = [EventInline]
-
+	inlines = [EventInline]	
+	list_display = ('__unicode__', 'consultation_date', 'latest_event')
+	date_heirarchy = 'consultation_date'
+	ordering = ('-consultation_date',)
+	#raw_id_fields = ('address',)
+	readonly_fields = ('get_final_price',)
 
 		
 

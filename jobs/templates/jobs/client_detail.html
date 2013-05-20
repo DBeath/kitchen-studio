@@ -1,0 +1,15 @@
+<h1>{{ client }}</h1>
+
+<p>{{ client.first_name }}</p>
+<p>{{ client.last_name }}</p>
+
+<p>{{ client.email }}</p>
+<p>{{ client.current_address }}</p>
+
+<ul>
+	{% for phone in client.phone_set.all %}
+		<li>{{ phone }}</li>
+	{% endfor %}
+</ul>
+
+<p><a href="{% url 'jobs:client_index' %}">Back to Client list.</a></p>
