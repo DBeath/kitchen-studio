@@ -1,0 +1,17 @@
+<html>
+	<head>
+		<title>Kitchen Studio Jobs</title>
+	</head>
+	<body>
+		{% if jobs_list %}
+			<ul>
+				{% for job in jobs_list %}
+
+					<li><a href="{% url 'jobs:detail' job.id %}">{{ job.client}} | {{ job.address }} | {{ job.latest_consultation_date }}</a></li>
+				{% endfor %}
+			</ul>
+		{% else %}
+			<p>No jobs are started</p>
+		{% endif %}
+	</body>
+</html>

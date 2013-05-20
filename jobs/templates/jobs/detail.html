@@ -1,0 +1,15 @@
+<h1>{{ job.client }} | {{ job.address }}</h1>
+
+<p>Budget is ${{ job.budget }}.</p>
+<p>Estimated cost is ${{ job.estimated_cost }}.</p>
+
+<ul>
+	{% for event in job.jobevent_set.all %}
+		<li>
+			<p>{{ event }}: {{ event.date }}</p> 
+			<p>{{ event.comment }}</p>
+		</li>
+	{% endfor %}
+</ul>
+
+<p><a href="{% url 'jobs:index' %}">Back to Jobs list.</a></p>
