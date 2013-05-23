@@ -1,8 +1,8 @@
-<h1>{{ job.client }} | {{ job.address }}</h1>
+<h1><a href="{% url 'jobs:client_detail' job.client.id %}">{{ job.client }}</a> | {{ job.address }}</h1>
 
 <p>Budget is ${{ job.budget }}.</p>
 <p>Final Price is ${{ job.get_final_price }}.</p>
-
+<p>Consultation on {{ job.consultation_date }}.</p>
 <ul>
 	{% for event in job.jobevent_set.all %}
 		<li>
