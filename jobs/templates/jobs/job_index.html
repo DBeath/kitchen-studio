@@ -1,16 +1,15 @@
-<html>
-	<head>
-		<title>Kitchen Studio Jobs</title>
-	</head>
-	<body>
-		{% if job_list %}
-			<ul>
-				{% for job in job_list %}
-					<li><a href="{% url 'jobs:job_detail' job.id %}">{{ job.client}} | {{ job.address }} | Consultation on {{ job.consultation_date }}</a></li>
-				{% endfor %}
-			</ul>
-		{% else %}
-			<p>No jobs are started.</p>
-		{% endif %}
-	</body>
-</html>
+{% extends "jobs/job_base.html" %}
+
+{% block title %}Jobs{% endblock %}
+
+{% block content %}
+	{% if job_list %}
+		<ul>
+			{% for job in job_list %}
+				<li><a href="{% url 'jobs:job_detail' job.id %}">{{ job.client}} | {{ job.address }} | Consultation on {{ job.consultation_date }}</a></li>
+			{% endfor %}
+		</ul>
+	{% else %}
+		<p>No jobs are started.</p>
+	{% endif %}
+{% endblock %}

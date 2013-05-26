@@ -1,17 +1,16 @@
-<html>
-	<head>
-		<title>Kitchen Studio Clients</title>
-	</head>
-	<body>
-		{% if client_list %}
-			<ul>
-				{% for client in client_list %}
-					<li><a href="{% url 'jobs:client_detail' client.id %}">{{ client }}
-					</a></li>
-				{% endfor %}
-			</ul>
-		{% else %}
-			<p>There are no clients.</p>
-		{% endif %}
-	</body>
-</html>
+{% extends "jobs/job_base.html" %}
+
+{% block title %}Clients{% endblock %}
+
+{% block content %}
+	{% if client_list %}
+		<ul>
+			{% for client in client_list %}
+				<li><a href="{% url 'jobs:client_detail' client.id %}">{{ client }}
+				</a></li>
+			{% endfor %}
+		</ul>
+	{% else %}
+		<p>There are no clients.</p>
+	{% endif %}
+{% endblock %}

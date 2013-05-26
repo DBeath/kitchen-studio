@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+
+<html lang="en">
+
+
+<head>
+	<title>Kitchen Studio {% block title %}{% endblock %}</title>
+	{% load staticfiles %}
+	<link rel="stylesheet" type="text/css" href="{% static 'jobs/style.css' %}" />
+</head>
+<body>
+	<div id="container">
+		<div id="header">
+			<h1>Kitchen Studio</h1>
+		</div>
+
+		<div id="sidebar">
+			{% block sidebar %}
+			<ul>
+				{% load admin_urls %}
+				<li><a href="{% url 'admin:index' %}">Admin</a></li>
+				<li><a href="{% url 'jobs:job_index' %}">Jobs</a></li>
+				<li><a href="{% url 'jobs:client_index' %}">Clients</a></li>
+			</ul>
+			{% endblock %}
+		</div>
+
+		<div id="content">
+			{% block content %}{% endblock %}
+		</div>
+	</div>
+</body>
+</html>
