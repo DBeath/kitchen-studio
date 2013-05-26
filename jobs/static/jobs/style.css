@@ -1,0 +1,43 @@
+a:link {
+	text-decoration: none;
+	color: blue;
+}
+
+a:visited {
+	color: purple;
+}
+
+li a {
+	color: green;
+}
+
+#header {
+	position: fixed;
+	width: 100%;
+	background: none repeat scroll 0 0 #417690;
+	top: 0%;
+	left: 0%;
+	margin: auto;
+	z-index: 100;
+}
+
+#sidebar {
+	position: absolute;
+	float: left;
+	top: 4em;
+	left: 0%;
+	width: 10%;
+	height: 100%;
+	background-color: lightblue;
+}
+
+#content {
+	padding-left: 11em;
+}
+
+#container {
+	padding: 0%;
+	position: relative;
+	width: 100%;
+}
+
