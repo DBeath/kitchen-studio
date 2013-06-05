@@ -1,0 +1,63 @@
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-family: sans-serif;
+	font-size: 1.4rem;
+}
+
+#layout {
+	position: relative;
+}
+
+#menu {
+	background: none repeat scroll #04014A;
+	position: fixed;
+	float: left;
+	left: 0vw;
+	overflow-y: auto;
+	top: 0;
+	bottom: 0;
+	width: 8em;
+	z-index: 1000;
+	padding: 0;
+
+}
+
+#menu a {
+	color: white;
+	text-decoration: none;
+}
+
+
+#menu a:visited {
+	color: white;
+}
+
+#menu ul {
+	padding: 0.5vw;
+	margin: 0;
+}
+
+#menu li {
+	padding: .5vw;
+	padding-bottom: 3vh;
+	font-size: 1.8rem;
+	display: block;
+}
+
+#main {
+	left: 10em;
+	position: relative;
+	width: 80vw;
+}
+
+
+h1 {
+	font-size: 3rem;
+}
+
+h5 {
+	font-size: 1.5rem;
+}

@@ -8,7 +8,7 @@
 	<p>{{ client.first_name }}</p>
 	<p>{{ client.last_name }}</p>
 
-	<p>{{ client.email }} Email:<input type="text" name="email"></p>
+	<p>{{ client.email }}
 	<p>{{ client.current_address }} </p>
 
 	<ul>
@@ -16,6 +16,6 @@
 			<li>{{ phone }}</li>
 		{% endfor %}
 	</ul>
-
+	<p><a href="{% url 'jobs:client_update' client.id %}">Edit the Client details.</a></p>
 	<p><a href="{% url 'jobs:client_index' %}">Back to Client list.</a></p>
 {% endblock %}

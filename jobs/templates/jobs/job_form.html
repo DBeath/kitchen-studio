@@ -1,0 +1,12 @@
+{% extends "jobs/job_base.html" %}
+
+{% block title %}Job: {{ job }}{% endblock %}
+
+{% block content %}
+	<!-- <form action="" method="post">{% csrf_token %}
+		{{ form.as_p }}
+		<input type="submit" value="Submit" />
+	</form> -->
+	{% load crispy_forms_tags %}
+	{% crispy form %}
+{% endblock %}

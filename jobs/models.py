@@ -1,4 +1,5 @@
 from django.db import models
+from django.core.urlresolvers import reverse
 import datetime
 from django.utils import timezone
 from django.db.models import Max, Sum
@@ -40,12 +41,16 @@ class Client(models.Model):
 	address = models.ManyToManyField(Address, through='ClientAddress', blank=True, 
 		null=True)
 
+	def get_absolute_url(self):
+		return reverse('jobs:client_detail', kwargs={'pk': self.pk})
+
 	def __unicode__(self):
 		return u"%s %s" % (self.first_name, self.last_name)
 
 	def current_address(self):
 		return self.clientaddress_set.latest('date_added').address
 
+	
 class ClientAddress(models.Model):
 	client = models.ForeignKey(Client)
 	address = models.ForeignKey(Address)
