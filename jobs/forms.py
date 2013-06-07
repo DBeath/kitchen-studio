@@ -32,7 +32,5 @@ class ClientUpdateForm(forms.ModelForm):
 		self.helper = FormHelper()
 		self.helper.add_input(Submit('submit', 'Submit'))
 			
-ClientFormSet = formset_factory(ClientUpdateForm, can_delete=True)
-client_formset = ClientFormSet()
 
 JobFormSet = inlineformset_factory(Job, JobEvent)
