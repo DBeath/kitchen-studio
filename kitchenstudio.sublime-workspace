@@ -4,80 +4,16 @@
 		"selected_items":
 		[
 			[
-				"Cl",
-				"ClientCreateForm"
+				"for",
+				"forms"
 			],
 			[
-				"Client",
-				"ClientUpdateForm"
+				"ad",
+				"add_input"
 			],
 			[
-				"co",
-				"content"
-			],
-			[
-				"new",
-				"new_comment"
-			],
-			[
-				"id",
-				"id"
-			],
-			[
-				"New",
-				"NewComment"
-			],
-			[
-				"get",
-				"get_comments"
-			],
-			[
-				"comm",
-				"comments"
-			],
-			[
-				"View",
-				"ViewComments"
-			],
-			[
-				"not",
-				"notnull"
-			],
-			[
-				"job",
-				"jobevent_formset"
-			],
-			[
-				"Jo",
-				"JobEventFormSet"
-			],
-			[
-				"form",
-				"form_class"
-			],
-			[
-				"Clie",
-				"ClientUpdateForm"
-			],
-			[
-				"clien",
-				"client_formset"
-			],
-			[
-				"Cle",
-				"ClientUpdateForm"
-			],
-			[
-				"Cli",
-				"ClientAddress"
-			],
-			[
-				"client",
-				"client_update"
-			],
-			[
-				"Update",
-				"UpdateView"
+				"Add",
+				"AddressUpdateForm"
 			],
 			[
 				"pad",
@@ -112,12 +48,20 @@
 				"latest_consultation_date"
 			],
 			[
+				"get",
+				"getLCD"
+			],
+			[
 				"oj",
 				"objectList"
 			],
 			[
 				"o",
 				"objects"
+			],
+			[
+				"job",
+				"job_status__contains"
 			],
 			[
 				"ob",
@@ -146,6 +90,10 @@
 			[
 				"jobe",
 				"jobevent_set"
+			],
+			[
+				"Jo",
+				"JobEvent"
 			],
 			[
 				"__",
@@ -188,12 +136,20 @@
 				"fieldsets"
 			],
 			[
+				"Clie",
+				"ClientAddressInline"
+			],
+			[
+				"Cl",
+				"ClientAddressAdmin"
+			],
+			[
 				"Clin",
 				"ClientAdmin"
 			],
 			[
-				"Add",
-				"Address"
+				"Client",
+				"ClientAdmin"
 			],
 			[
 				"add",
@@ -267,94 +223,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "jobs/models.py",
-			"settings":
-			{
-				"buffer_size": 3895,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "jobs/forms.py",
-			"settings":
-			{
-				"buffer_size": 1130,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "jobs/views.py",
-			"settings":
-			{
-				"buffer_size": 2041,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "kitchenstudio/settings.py",
-			"settings":
-			{
-				"buffer_size": 6109,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "jobs/admin.py",
-			"settings":
-			{
-				"buffer_size": 1037,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "jobs/templates/jobs/job_detail.html",
-			"settings":
-			{
-				"buffer_size": 673,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "jobs/templates/jobs/job_index.html",
-			"settings":
-			{
-				"buffer_size": 508,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "jobs/templates/jobs/client_index.html",
-			"settings":
-			{
-				"buffer_size": 422,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "jobs/templates/jobs/client_detail.html",
-			"settings":
-			{
-				"buffer_size": 520,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "jobs/urls.py",
-			"settings":
-			{
-				"buffer_size": 655,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "jobs/templates/jobs/client_form.html",
-			"settings":
-			{
-				"buffer_size": 297,
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -380,40 +248,17 @@
 	},
 	"file_history":
 	[
-		"/home/dbeath/workspace/webpy/blog/model.py",
-		"/home/dbeath/workspace/webpy/blog/blog.py",
-		"/home/dbeath/workspace/webpy/blog/templates/newcomment.html",
-		"/home/dbeath/workspace/webpy/blog/templates/index.html",
-		"/home/dbeath/workspace/webpy/blog/templates/edit.html",
-		"/home/dbeath/workspace/webpy/blog/templates/view.html",
-		"/home/dbeath/workspace/webpy/blog/templates/new.html",
-		"/home/dbeath/workspace/webpy/blog/templates/base.html",
-		"/home/dbeath/workspace/webpy/blog/schema.sql",
-		"/home/dbeath/workspace/kitchenstudio/jobs/models.py",
-		"/home/dbeath/workspace/webpytutorial/code.py",
-		"/home/dbeath/workspace/webpytutorial/config.py",
-		"/home/dbeath/workspace/webpytutorial/db.py",
-		"/home/dbeath/workspace/webpytutorial/view.py",
-		"/home/dbeath/workspace/webpytutorial/sql/tables.sql",
-		"/home/dbeath/workspace/webpytutorial/templates/index.html",
-		"/home/dbeath/workspace/webpytutorial/templates/base.html",
-		"/home/dbeath/workspace/webpytutorial/templates/listing.html",
-		"/home/dbeath/workspace/webpytutorial/templates/item.html",
-		"/home/dbeath/workspace/kitchenstudio/jobs/views.py",
-		"/home/dbeath/workspace/kitchenstudio/jobs/forms.py",
-		"/home/dbeath/workspace/kitchenstudio/jobs/templates/jobs/client_form.html",
-		"/home/dbeath/workspace/kitchenstudio/jobs/templates/jobs/job_form.html",
-		"/home/dbeath/workspace/kitchenstudio/jobs/urls.py",
 		"/home/dbeath/workspace/kitchenstudio/kitchenstudio/settings.py",
-		"/home/dbeath/workspace/kitchenstudio/jobs/templates/jobs/client_detail.html",
-		"/home/dbeath/workspace/kitchenstudio/jobs/templates/jobs/job_detail.html",
-		"/home/dbeath/workspace/kitchenstudio/jobs/templates/jobs/job_index.html",
+		"/home/dbeath/workspace/kitchenstudio/jobs/views.py",
 		"/home/dbeath/workspace/kitchenstudio/jobs/templates/jobs/job_base.html",
+		"/home/dbeath/workspace/kitchenstudio/jobs/templates/jobs/job_index.html",
+		"/home/dbeath/workspace/kitchenstudio/jobs/urls.py",
+		"/home/dbeath/workspace/kitchenstudio/jobs/templates/jobs/job_detail.html",
+		"/home/dbeath/workspace/kitchenstudio/jobs/templates/jobs/client_detail.html",
 		"/home/dbeath/workspace/kitchenstudio/jobs/templates/jobs/client_index.html",
 		"/home/dbeath/workspace/kitchenstudio/kitchenstudio/urls.py",
 		"/home/dbeath/workspace/kitchenstudio/jobs/static/jobs/style.css",
 		"/home/dbeath/workspace/kitchenstudio/jobs/static/jobs/pure-min.css",
-		"/home/dbeath/workspace/kitchenstudio/requirements.txt",
 		"/home/dbeath/workspace/davidbeath.com/base.html",
 		"/home/dbeath/workspace/html5-boilerplate/404.html",
 		"/home/dbeath/workspace/html5-boilerplate/css/main.css",
@@ -421,6 +266,7 @@
 		"/home/dbeath/Downloads/pure-min.css",
 		"/home/dbeath/workspace/kitchenstudio/jobs/admin.py",
 		"/home/dbeath/workspace/kitchenstudio/jobs/jobs.sublime-project",
+		"/home/dbeath/workspace/kitchenstudio/requirements.txt",
 		"/usr/local/lib/python2.7/dist-packages/SimPy/Globals.py",
 		"/usr/local/lib/python2.7/dist-packages/SimPy/Simulation.py",
 		"/home/dbeath/.config/sublime-text-2/Packages/User/Preferences.sublime-settings",
@@ -507,7 +353,16 @@
 		"/usr/bin/testrb",
 		"/usr/bin/heroku",
 		"/usr/bin/erb",
-		"/usr/bin/erb1.9.1"
+		"/usr/bin/erb1.9.1",
+		"/usr/bin/foreman",
+		"/usr/bin/gem",
+		"/usr/local/bin/scss",
+		"/usr/local/bin/sass-convert",
+		"/usr/local/bin/sass",
+		"/usr/local/bin/rspec",
+		"/usr/local/bin/ri",
+		"/usr/local/bin/bundle",
+		"/home/dbeath/workspace/rails/first_app/Gemfile.lock"
 	],
 	"find":
 	{
@@ -542,306 +397,8 @@
 	"groups":
 	[
 		{
-			"selected": 9,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "jobs/models.py",
-					"settings":
-					{
-						"buffer_size": 3895,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1217,
-								1217
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python/Python.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 90.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "jobs/forms.py",
-					"settings":
-					{
-						"buffer_size": 1130,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								992,
-								992
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python/Python.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "jobs/views.py",
-					"settings":
-					{
-						"buffer_size": 2041,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1787,
-								1787
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python/Python.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 630.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "kitchenstudio/settings.py",
-					"settings":
-					{
-						"buffer_size": 6109,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								5598,
-								5598
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python/Python.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 180.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "jobs/admin.py",
-					"settings":
-					{
-						"buffer_size": 1037,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								450,
-								450
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python/Python.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "jobs/templates/jobs/job_detail.html",
-					"settings":
-					{
-						"buffer_size": 673,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "jobs/templates/jobs/job_index.html",
-					"settings":
-					{
-						"buffer_size": 508,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								233,
-								233
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "jobs/templates/jobs/client_index.html",
-					"settings":
-					{
-						"buffer_size": 422,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								406,
-								406
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "jobs/templates/jobs/client_detail.html",
-					"settings":
-					{
-						"buffer_size": 520,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								241,
-								241
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 9,
-					"file": "jobs/urls.py",
-					"settings":
-					{
-						"buffer_size": 655,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								655,
-								655
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python/Python.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 10,
-					"file": "jobs/templates/jobs/client_form.html",
-					"settings":
-					{
-						"buffer_size": 297,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				}
 			]
 		}
 	],
@@ -901,6 +458,6 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 189.0,
+	"side_bar_width": 138.0,
 	"status_bar_visible": true
 }
