@@ -1,4 +1,4 @@
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render, get_object_or_404
 from django.views.generic import ListView, DetailView 
 from django.views.generic.edit import UpdateView, CreateView, DeleteView
@@ -42,6 +42,7 @@ class ClientIndexView(ListView):
 
 class ClientCreateView(CreateView):
     model = Client
+    form_class = ClientCreateForm
 
 class ClientDetail(DetailView):
     model = Client
@@ -50,9 +51,24 @@ class ClientDetail(DetailView):
 
 class ClientUpdate(UpdateView):
     model = Client
-    form_class = ClientUpdateForm
+
+    form_class = ClientFormSet
 
 class JobUpdate(UpdateView):
     model = Job
-    form_class = JobFormSet
-        
+
+
+def new_client(request):
+    # if request.method == 'POST':
+    client_form = ClientCreateForm(request.POST)
+    address_form = AddressCreateForm(request.POST)
+    print "post"
+    if client_form.is_valid() and address_form.is_valid():
+        print "valid"
+        a = address_form.save()
+        c = client_form.save(commit=false)
+        c.a = a
+        c.save()
+        return HttpResponseRedirect('/jobs/')
+    # else:
+    #     return HttpResponseRedirect('/jobs/')

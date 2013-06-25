@@ -9,4 +9,5 @@ urlpatterns = patterns('',
 	url(r'^clients/$', views.ClientIndexView.as_view(), name='client_index'),
 	url(r'^clients/(?P<pk>\d+)/$', views.ClientDetail.as_view(), name='client_detail'),
 	url(r'^clients/(?P<pk>\d+)/edit/$', views.ClientUpdate.as_view(), name='client_update'),
+	url(r'^clients/new/$', views.ClientCreateForm.as_view(), name='client_create'),
 	)
