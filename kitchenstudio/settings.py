@@ -101,6 +101,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.messages.middleware.MessageMiddleware',
     # Uncomment the next line for simple clickjacking protection:
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
 )
 
 ROOT_URLCONF = 'kitchenstudio.urls'
@@ -126,6 +127,9 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
+    'floppyforms',
+    'crispy_forms',
+    'debug_toolbar',
     'jobs',
 )
 
@@ -166,3 +170,9 @@ DATABASES = {'default': dj_database_url.config(default='postgres://postgres:post
 # Honor the 'X-Forwarded-Proto' header for request.is_secure()
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
+INTERNAL_IPS = ('127.0.0.1',)
+
+
+
+# To delete all tables and recreate model.
+# pthon manage.py sqlclear appname | python manage.py dbshell

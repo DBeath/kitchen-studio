@@ -17,5 +17,6 @@
 		{% endfor %}
 	</ul>
 
+	<p><a href="{% url 'jobs:job_update' job.id %}">Edit the Job details.</a></p>
 	<p><a href="{% url 'jobs:job_index' %}">Back to Jobs list.</a></p>
 {% endblock %}

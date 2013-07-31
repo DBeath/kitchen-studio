@@ -4,6 +4,42 @@
 		"selected_items":
 		[
 			[
+				"for",
+				"forms"
+			],
+			[
+				"ad",
+				"add_input"
+			],
+			[
+				"Add",
+				"AddressUpdateForm"
+			],
+			[
+				"pad",
+				"padding-left"
+			],
+			[
+				"bac",
+				"background"
+			],
+			[
+				"in",
+				"inline-block"
+			],
+			[
+				"top",
+				"margin-top"
+			],
+			[
+				"he",
+				"height"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
 				"Job",
 				"JobManager"
 			],
@@ -112,10 +148,6 @@
 				"ClientAdmin"
 			],
 			[
-				"Add",
-				"Address"
-			],
-			[
 				"Client",
 				"ClientAdmin"
 			],
@@ -216,12 +248,27 @@
 	},
 	"file_history":
 	[
+		"/home/dbeath/workspace/kitchenstudio/kitchenstudio/settings.py",
+		"/home/dbeath/workspace/kitchenstudio/jobs/views.py",
+		"/home/dbeath/workspace/kitchenstudio/jobs/templates/jobs/job_base.html",
+		"/home/dbeath/workspace/kitchenstudio/jobs/templates/jobs/job_index.html",
+		"/home/dbeath/workspace/kitchenstudio/jobs/urls.py",
+		"/home/dbeath/workspace/kitchenstudio/jobs/templates/jobs/job_detail.html",
+		"/home/dbeath/workspace/kitchenstudio/jobs/templates/jobs/client_detail.html",
+		"/home/dbeath/workspace/kitchenstudio/jobs/templates/jobs/client_index.html",
+		"/home/dbeath/workspace/kitchenstudio/kitchenstudio/urls.py",
+		"/home/dbeath/workspace/kitchenstudio/jobs/static/jobs/style.css",
+		"/home/dbeath/workspace/kitchenstudio/jobs/static/jobs/pure-min.css",
+		"/home/dbeath/workspace/davidbeath.com/base.html",
+		"/home/dbeath/workspace/html5-boilerplate/404.html",
+		"/home/dbeath/workspace/html5-boilerplate/css/main.css",
+		"/home/dbeath/workspace/kitchenstudio/jobs/static/jobs/pure-skin.css",
+		"/home/dbeath/Downloads/pure-min.css",
+		"/home/dbeath/workspace/kitchenstudio/jobs/admin.py",
 		"/home/dbeath/workspace/kitchenstudio/jobs/jobs.sublime-project",
 		"/home/dbeath/workspace/kitchenstudio/requirements.txt",
-		"/home/dbeath/workspace/kitchenstudio/jobs/templates/jobs/job_detail.html",
 		"/usr/local/lib/python2.7/dist-packages/SimPy/Globals.py",
 		"/usr/local/lib/python2.7/dist-packages/SimPy/Simulation.py",
-		"/home/dbeath/workspace/kitchenstudio/kitchenstudio/settings.py",
 		"/home/dbeath/.config/sublime-text-2/Packages/User/Preferences.sublime-settings",
 		"/usr/local/lib/python2.7/dist-packages/SimPy/SimulationStep.py",
 		"/usr/local/lib/python2.7/dist-packages/SimPy/stepping.py",
@@ -361,7 +408,7 @@
 	},
 	"input":
 	{
-		"height": 0.0
+		"height": 31.0
 	},
 	"layout":
 	{
@@ -411,6 +458,6 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 150.0,
+	"side_bar_width": 138.0,
 	"status_bar_visible": true
 }

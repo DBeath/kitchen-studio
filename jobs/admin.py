@@ -1,9 +1,6 @@
 from django.contrib import admin
-from jobs.models import Client, Job, Address, JobEvent, ClientAddress, Phone
+from jobs.models import Client, Job, Address, JobEvent, Phone
 
-class ClientAddressInline(admin.TabularInline):
-	model = Client.address.through
-	extra = 1
 
 class PhoneAdmin(admin.TabularInline):
 	model = Phone
@@ -16,14 +13,15 @@ class JobInline(admin.TabularInline):
 class ClientAdmin(admin.ModelAdmin):
 	fieldsets = [
 		('Name', {'fields': ['first_name', 'last_name']}),
-		('Email', {'fields': ['email']})
+		('Email', {'fields': ['email']}),
+		('Address', {'fields': ['address']}),
 	]
 	list_display = ('__unicode__', 'email')
 	ordering = ('last_name',)
-	inlines = [ClientAddressInline, PhoneAdmin, JobInline]
+	inlines = [PhoneAdmin, JobInline]
 
 class AddressAdmin(admin.ModelAdmin):
-	inlines = [ClientAddressInline]
+	model = Address
 
 class EventInline(admin.TabularInline):
 	model = JobEvent

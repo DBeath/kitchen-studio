@@ -2,32 +2,40 @@
 
 <html lang="en">
 
-
 <head>
+	<meta charset="utf-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+
 	<title>Kitchen Studio {% block title %}{% endblock %}</title>
+
 	{% load staticfiles %}
-	<link rel="stylesheet" type="text/css" href="{% static 'jobs/style.css' %}" />
+	<link rel="stylesheet" type="text/css" href="{% static 'jobs/main.css' %}">
+	<!-- <link rel="stylesheet" href="{% static 'jobs/pure-min.css' %}" />
+	<link rel="stylesheet" href="{% static 'jobs/style.css' %}" /> -->
+	
 </head>
+
 <body>
-	<div id="container">
-		<div id="header">
-			<h1>Kitchen Studio</h1>
+	<div id="layout" class="pure-g-r">
+		
+		<div id="menu" class="pure-u">
+			<div class="pure-menu pure-menu-open">
+				{% block sidebar %}
+				<a class="pure-menu-heading" href="{% url 'jobs:job_index' %}">Kitchen Studio</a>
+				<ul>
+					{% load admin_urls %}
+					<li><a href="{% url 'admin:index' %}">Admin</a></li>
+					<li><a href="{% url 'jobs:job_index' %}">Jobs</a></li>
+					<li><a href="{% url 'jobs:client_index' %}">Clients</a></li>
+				</ul>
+				{% endblock %}
+			</div>
 		</div>
 
-		<div id="sidebar">
-			{% block sidebar %}
-			<ul>
-				{% load admin_urls %}
-				<li><a href="{% url 'admin:index' %}">Admin</a></li>
-				<li><a href="{% url 'jobs:job_index' %}">Jobs</a></li>
-				<li><a href="{% url 'jobs:client_index' %}">Clients</a></li>
-			</ul>
-			{% endblock %}
-		</div>
-
-		<div id="content">
+		<div id="main" class="pure-u">
 			{% block content %}{% endblock %}
 		</div>
+		
 	</div>
 </body>
 </html>

@@ -7,10 +7,12 @@
 		<ul>
 			{% for client in client_list %}
 				<li><a href="{% url 'jobs:client_detail' client.id %}">{{ client }}
-				</a></li>
+				</a> | {{ client.address }}</li>
 			{% endfor %}
 		</ul>
 	{% else %}
 		<p>There are no clients.</p>
 	{% endif %}
+
+	<a href="{% url 'jobs:client_create' %}">New Client</a>
 {% endblock %}
